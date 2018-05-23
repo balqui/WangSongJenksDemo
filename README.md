@@ -1,3 +1,7 @@
+Local usage: download or clone, keep folder brython_src and files 
+index.html, DemoWSJ.py together, and open index.html in browser.
+
+Remote usage: do the same into some place that a web server can handle.
 
 Demo of each single pass of the Jenks natural breaks algorithm.
 
