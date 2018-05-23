@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	.zone{
+    margin-left: 5em;
+    padding: 1em;
+    border-width: 1px;
+    border-color: #333;
+    border-style: solid;
+    width: 20em;
+	}
+</style>
+
+<script src="brython_src/brython.js"></script>
+</head>
+
+<body onload="brython()">
+
+<!--Check for companion file DemoWSJ.py nearby-->
+
+<!--Tried to enable inputs and buttons one by one but did not manage-->
+	
+<button id="aboutbutton">About...</button>
+
+<br>
+
+<label>Please start by indicating how many clusters and how many values seen so far:</label>
+
+<br>
+
+<input id="numclusters" autocomplete="off" placeholder="How many clusters?">
+
+<br>
+
+<input id="numvalues" autocomplete="off" placeholder="How many values so far?">
+
+<br>
+
+<button id="startbutton">Click to provide ordered values</button>
+
+<br>
+
+<input id="value" autocomplete="off" disabled>
+
+<br>
+
+<button id="submitbutton" disabled>Submit one value...</button>
+
+<br>
+
+<label id="allvallab">Values, clustered when possible:</label><div id="allvalues" class="zone"></div>
+
+<br>
+
+<input id="newvalue" autocomplete="off" placeholder="New value" disabled><button id="submitnewbutton" disabled>Submit</button>
+
+<br>
+
+<label id="allcluslab">Clusterings considered:</label><div id="allclus" class="zone"></div>
+
+<br>
+
+<label id="bestcluslab">Best clustering:</label><div id="bestclus" class="zone"></div>
+
+<script type="text/python" src="DemoWSJ.py"></script>
+
+</body>
+
+</html>
