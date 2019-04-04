@@ -18,9 +18,12 @@ same thing as the optimum 1D k-means discretization by
 Wang and Song) to construct a veeeery inefficient demo of 
 the dynamic programming strategy behind these algorithms.
 
-Aesthetics to be taken care of some day.
+Aesthetics and usability to be taken care of some day.
 
-José L Balcázar (balqui at BitBucket or GitHub), 2018"""
+Get this software from https://bitbucket.org/balqui/demowangsongjenks
+(clone on Mercurial or download freely).
+
+José L Balcázar (balqui at BitBucket or GitHub), 2018, 2019"""
 
 from browser import document, alert, html # Brython in-browser support
 
@@ -140,6 +143,12 @@ def extenddata():
 	global i
 	i += 1
 	new = float(document["value"].value)
+	if new <= 0:
+			alert("Please provide positive floats. Last input ignored.")
+			i -= 1
+			document['value'].value = ""
+			document['value'].placeholder = "Please input value " + str(i) + " and submit it"
+			return
 	if data:
 		if data[-1] >= new:
 			alert("Please provide the points in increasing order. Last input ignored.")
